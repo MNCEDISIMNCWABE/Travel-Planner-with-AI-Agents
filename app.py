@@ -5,7 +5,6 @@ from langchain_openai import ChatOpenAI
 from langchain.callbacks.base import BaseCallbackHandler
 from langchain.schema import LLMResult
 from typing import Any, Dict, List
-
 import json
 import requests
 from langchain.tools import tool
