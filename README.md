@@ -1,6 +1,6 @@
 # AI-Powered Travel Planner using CrewAI Agents
 
-This repository demonstrates how to use AI agents to create a comprehensive and personalized travel plan, including flight options, accommodations, activities, and itineraries. By leveraging LangChain, CrewAI and Streamlit for front end, you can simplify travel planning in a dynamic and interactive way. In this repo, I used CrewAI as the main framework because it allows the use of tools with almost any open-source LLM. 
+This repository demonstrates how to use AI agents to create a comprehensive and personalized travel plan, including flight options, accommodations, activities, and itineraries. By leveraging LangChain, CrewAI and Streamlit for front end, you can simplify travel planning in a dynamic and interactive way. In this repo, I used CrewAI as the primary framework because it enables the integration of tools with virtually any open-source LLM.
 
 To learn more about CrewAI Agents, please visit [CrewAI](https://docs.crewai.com/introduction).
 
