@@ -42,9 +42,9 @@ streamlit run app.py
 
 1. Two AI Agents:
 
-- Travel Planner: Finds relevant information about budget-friendly flights, accommodations, and activities to do at destination from the internet.
+- Travel Research Specialist: Finds relevant information about budget-friendly flights, accommodations, and activities to do at destination from the internet.
 
-- Vacation Itinerary Creator: Crafts a detailed, day-by-day itinerary based on the Travel Planner's agent findings.
+- Vacation Itinerary Creator: Crafts a detailed, day-by-day itinerary based on the Travel Research Specialist's agent findings.
 
 2. Dynamic Tasks: Each agent executes specific tasks, like planning the vacation budget and creating the itinerary.
 
