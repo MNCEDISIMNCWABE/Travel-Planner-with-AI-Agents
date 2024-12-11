@@ -10,7 +10,7 @@ import requests
 from langchain.tools import tool
 
 MODEL_NAME = "ollama/llama3.2"  # The name of the LLM model to be used for inference, in this case, Ollama's LLaMA 3.2.
-BASE_URL = "http://127.0.0.1:11434"  # The base URL for the LLM server, running locally on port 11434.
+BASE_URL = "http://localhost:11434"  # The base URL for the LLM server, running locally on port 11434.
 PROVIDER = "ollama"  # Specifies the LLM provider; here, it indicates Ollama as the provider.
 SERPER_API_KEY = "<YOUR_SERPER_API_KEY>"  # API key for the Serper API, used to perform internet searches.
 
