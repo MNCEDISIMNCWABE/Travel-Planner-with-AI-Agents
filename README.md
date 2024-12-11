@@ -13,10 +13,7 @@ To learn more about CrewAI Agents, please visit [CrewAI](https://docs.crewai.com
 - Create an account with [Serper API ](https://serper.dev/) to obtain an API key for internet search functionality, you will get 2500 free searches.
 
 ### Install Libraries
-- ```pip install streamlit ``` 
-- ```pip install crewai```     
-- ```pip install langchain```
-- ```pip install requests```
+- ```pip install streamlit crewai langchain requests```
 
 Run the app:
 ```
