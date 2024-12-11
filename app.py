@@ -45,7 +45,10 @@ class SearchTools:
             return [{"error": f"Error during search: {e}"}]
 
 # Define LLM
-llm = LLM(model=MODEL_NAME, base_url=BASE_URL, provider=PROVIDER)
+llm = LLM(model=MODEL_NAME, 
+          base_url=BASE_URL, 
+          provider=PROVIDER
+         )
 
 # Define the agents with roles and goals
 def create_planner(from_location, destination):
