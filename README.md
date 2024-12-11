@@ -1,5 +1,21 @@
 # AI-Powered Travel Planner using CrewAI Agents
 
+## What are AI Agents
+AI agents are autonomous systems that perform specific tasks by interacting with tools, data, or users. They leverage AI models to analyze input, make decisions, and produce useful results without constant human supervision.
+
+### General Description:
+An AI agent typically has:
+- A defined goal: The specific task it is designed to complete.
+- Tools or resources: Systems it interacts with, like APIs, databases, or search engines.
+- A decision-making process: Often powered by AI models, enabling the agent to adapt to varying situations.
+
+Example:
+Imagine you want to bake a cake but don't know how to get started. An AI agent designed for this task could:
+- Search for recipes online: Gather information from cooking websites.
+- Create a shopping list: Identify ingredients needed and suggest nearby stores to buy them.
+- Guide the baking process: Provide step-by-step instructions as you prepare the cake.
+The AI agent simplifies the process, saves you time just like a virtual assistant helping with a real-life goal.
+
 This repository demonstrates how to use AI agents to create a comprehensive and personalized travel plan, including flight options, accommodations, activities, and itineraries. By leveraging LangChain, CrewAI and Streamlit for front end, you can simplify travel planning in a dynamic and interactive way. In this repo, I used CrewAI as the primary framework because it enables the integration of tools with virtually any open-source LLM.
 
 To learn more about CrewAI Agents, please visit [CrewAI](https://docs.crewai.com/introduction).
