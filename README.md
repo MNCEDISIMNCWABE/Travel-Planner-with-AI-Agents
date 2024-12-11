@@ -18,10 +18,12 @@ To learn more about CrewAI Agents, please visit [CrewAI](https://docs.crewai.com
 - ```pip install langchain```
 - ```pip install requests```
 
-Clone the repo:
-
-git clone git@github.com:madmag77/crewai-article-example.git
-cd crewai-article-example
+Run the app:
+```
+git clone https://github.com/MNCEDISIMNCWABE/Travel-Planner-with-AI-Agents.git
+cd Travel-Planner-with-AI-Agents
+streamlit run app.py
+```
 
 ## Features
 
