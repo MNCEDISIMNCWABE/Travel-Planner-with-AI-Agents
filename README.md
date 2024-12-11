@@ -79,3 +79,10 @@ Output:
 - Custom Internet Search Tool: Fetches information about flights, accommodations, and activities.
   
 - Streamlit: Front-end framework for creating interactive web apps.
+
+
+The result on Streamlit looks like this:
+
+<img width="825" alt="image" src="https://github.com/user-attachments/assets/e3a1b8fc-a9e8-4470-88c8-825772ad6ffd">
+
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/4f6d720f-d5e3-4525-8a34-800952c9aad5">
