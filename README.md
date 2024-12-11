@@ -8,8 +8,8 @@ To learn more about CrewAI Agents, please visit [CrewAI](https://docs.crewai.com
 
 ### Prerequisites
 
-- LLM Server: This server is responsible for running inferences using the selected language model (LLM). It can operate as a remote server, such as OpenAI’s service, or as a locally hosted instance. Install [Ollama](https://ollama.com/) to run LLMs locally. Alternatively, you can use any local LLM server such as[ LM Studio](https://lmstudio.ai/), but this project specifically uses Ollama.
-
+- LLM Server: This server is responsible for running inferences using the selected language model (LLM). It can operate as a remote server, such as OpenAI’s service, or as a locally hosted instance.
+- Install [Ollama](https://ollama.com/) to run LLMs locally. Alternatively, you can use any local LLM server such as[ LM Studio](https://lmstudio.ai/), but this project specifically uses Ollama.
 - Create an account with [Serper API ](https://serper.dev/) to obtain an API key for internet search functionality, you will get 2500 free searches.
 
 ### Install Libraries
