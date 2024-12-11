@@ -46,10 +46,10 @@ Output:
 
 - LangChain: Framework for building AI agents and managing workflows.
 
-- Crew.AI: Simplifies multi-agent task execution.
+- CrewAI: Simplifies multi-agent task execution.
 
 - LLMs (Language Learning Models): Used to power the AI agents, including OpenAI and Ollama's models.
 
-- Custom Internet Search Tool: Fetches live data for flights, accommodations, and activities.
+- Custom Internet Search Tool: Fetches information about flights, accommodations, and activities.
   
 - Streamlit: Front-end framework for creating interactive web apps.
