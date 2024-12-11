@@ -5,12 +5,13 @@ from langchain_openai import ChatOpenAI
 from langchain.callbacks.base import BaseCallbackHandler
 from langchain.schema import LLMResult
 from typing import Any, Dict, List
+
 import json
 import requests
 from langchain.tools import tool
 
 MODEL_NAME = "ollama/llama3.2"  # The name of the LLM model to be used for inference, in this case, Ollama's LLaMA 3.2.
-BASE_URL = "http://localhost:11434"  # The base URL for the LLM server, running locally on port 11434.
+BASE_URL = "http://127.0.0.1:11434"  # The base URL for the LLM server, running locally on port 11434.
 PROVIDER = "ollama"  # Specifies the LLM provider; here, it indicates Ollama as the provider.
 SERPER_API_KEY = "<YOUR_SERPER_API_KEY>"  # API key for the Serper API, used to perform internet searches.
 
@@ -45,15 +46,12 @@ class SearchTools:
             return [{"error": f"Error during search: {e}"}]
 
 # Define LLM
-llm = LLM(model=MODEL_NAME, 
-          base_url=BASE_URL, 
-          provider=PROVIDER
-         )
+llm = LLM(model=MODEL_NAME, base_url=BASE_URL, provider=PROVIDER)
 
 # Define the agents with roles and goals
 def create_planner(from_location, destination):
     return Agent(
-        role='Travel Planner',
+        role='Travel Research Specialist',
         goal=f'Plan a vacation from {from_location} to {destination} for {num_people} people.',
         backstory=f"""You are an expert travel planner specializing in budget-friendly vacations.
         Your role is to find the best options for travel, accommodation, and activities from {from_location} to {destination}.""",
@@ -84,8 +82,8 @@ def create_planning_task(planner, from_location, destination):
 
         STEPS TO COMPLETE THE TASK:
         1. Search for affordable flights from {from_location} to {destination} and provide 3 options with links and costs.
-        2. Find 4 budget-friendly accommodations in {destination} for one week, with links and total costs.
-        3. Identify affordable activities and excursions in {destination} for two people, with estimated costs.
+        2. Find 4 budget-friendly accommodations in {destination} for {duration} days, with links and total costs.
+        3. Identify affordable activities and excursions in {destination} for {num_people} people, with estimated costs.
         4. Calculate total costs (flights, accommodation, and activities).""",
         expected_output=f"""A detailed breakdown of costs for a {destination} vacation for {num_people} people from {from_location}, including:
         - Links to 3 flight options with costs for return tickets from {from_location} to {destination}.
@@ -93,7 +91,7 @@ def create_planning_task(planner, from_location, destination):
         - Activities with individual and total costs.
         - Final cost breakdown.""",
         agent=planner,
-        max_iter=5,
+        max_iter=5
     )
 
 def create_itinerary_task(writer, from_location, destination, duration):
@@ -102,7 +100,7 @@ def create_itinerary_task(writer, from_location, destination, duration):
 
         Itinerary Requirements:
         1. Provide a day-by-day breakdown of activities.
-        2. Include details on accommodations, transport, meals, and excursions.
+        2. Include details on accommodations, transport, meals, and excursions with costs and links.
         3. Ensure the itinerary is engaging and provides a comprehensive travel experience from {from_location} to {destination}.""",
         expected_output=f"""A complete {duration}-day vacation itinerary from {from_location} to {destination}, including:
         - Day-by-day schedule
@@ -110,6 +108,7 @@ def create_itinerary_task(writer, from_location, destination, duration):
         - Accommodation and meal details with costs
         - Transport details between {from_location} and {destination} with costs.""",
         agent=writer,
+        max_iter=5
     )
 
 # Streamlit App
@@ -145,7 +144,7 @@ if st.button("Generate Travel Plan"):
     st.write("Result:")
     st.json(result)
 
-    # Access the task results
+    # Safely access the task results
     try:
         planning_result = result.get("tasks", {}).get("planning_task", {}).get("output", "No result found for Planning Task")
         itinerary_result = result.get("tasks", {}).get("itinerary_task", {}).get("output", "No result found for Itinerary Task")
@@ -153,6 +152,7 @@ if st.button("Generate Travel Plan"):
         st.write(f"Error accessing task results: {e}")
         planning_result = "Error occurred while fetching planning result"
         itinerary_result = "Error occurred while fetching itinerary result"
+
 
     # Display Results in Streamlit
     st.header("Travel Plan Breakdown")
