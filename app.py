@@ -145,7 +145,7 @@ if st.button("Generate Travel Plan"):
     st.write("Result:")
     st.json(result)
 
-    # Safely access the task results
+    # Access the task results
     try:
         planning_result = result.get("tasks", {}).get("planning_task", {}).get("output", "No result found for Planning Task")
         itinerary_result = result.get("tasks", {}).get("itinerary_task", {}).get("output", "No result found for Itinerary Task")
@@ -153,7 +153,6 @@ if st.button("Generate Travel Plan"):
         st.write(f"Error accessing task results: {e}")
         planning_result = "Error occurred while fetching planning result"
         itinerary_result = "Error occurred while fetching itinerary result"
-
 
     # Display Results in Streamlit
     st.header("Travel Plan Breakdown")
