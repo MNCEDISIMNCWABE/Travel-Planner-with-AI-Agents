@@ -1,4 +1,4 @@
-# AI-Powered Travel Planner using AI Agents
+# Vacation and Travel Planner using AI Agents
 
 ## What are AI Agents
 AI agents are autonomous systems that perform specific tasks by interacting with tools, data, or users. They leverage AI models to analyze input, make decisions, and produce useful results without constant human supervision.
