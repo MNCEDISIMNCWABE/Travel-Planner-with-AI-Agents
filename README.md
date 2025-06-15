@@ -1,7 +1,7 @@
 # Vacation and Travel Planner using AI Agents
 
 ## What are AI Agents
-AI agents are autonomous systems that perform specific tasks by interacting with tools, data, or users. They leverage AI models to analyze input, make decisions, and produce useful results without constant human supervision.
+AI agents are autonomous systems that perform specific tasks by interacting with tools, data, or users. They leverage AI models to analyze input, make decisions, and produce useful results without constant human supervision. More: https://www.ibm.com/think/topics/ai-agents
 
 ### General Description:
 An AI agent typically has:
